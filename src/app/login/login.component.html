@@ -1,0 +1,40 @@
+    <div class="columns is-centered">
+            <div class="column is-5">
+              <div class="card">
+                <header class="card-header"></header>
+                <div class="card-content">
+                  <div class="tabs">
+                    <ul>
+                      <li [ngClass]="{'is-active': showingLogin}" (click)="showLogin()">
+                        <a>Log In</a>
+                      </li>
+                      <li [ngClass]="{'is-active': showingSignup}" (click)="showSignup()">
+                        <a>Sign Up</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div *ngIf="showingLogin">
+                      <figure class="image is-centered is-128x128">
+                          <img src="assets/img/large.jpg">
+                      </figure>
+                    <form method="POST" (ngSubmit)=onSubmit()>
+                      <div>
+                      <label>
+                        Email
+                        <input class="input" type="email" placeholder="Email">
+                      </label>
+                      <label>
+                        Password
+                      <input class="input" type="password" placeholder="Password">
+                       </label>
+                      </div>
+                      <div>
+                       <button class="button is-warning" type="submit">Log In</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div *ngIf="showingSignup"> Please contact your system administrator to create your accout!</div>
+                </div>
+              </div>
+            </div>
+          </div>

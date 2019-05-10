@@ -1,0 +1,31 @@
+<div class="columns is-centered">
+    <div class="column is-5">
+        <div class="card">
+            <header class="card-header"></header>
+                <div class="card-content">
+                    <div class="tabs">
+                        <ul>
+                          <li [ngClass]="{'is-active': showingTeam}" (click)="showTeam()">
+                            <a>The Team</a>
+                          </li>
+                          <li [ngClass]="{'is-active': showingSponsers}" (click)="showSponsers()">
+                              <a>Our Sponsers</a>
+                            </li>
+                       </ul>
+              </div>
+                <div *ngIf="showingTeam">
+                  <p>
+                    Alexis Schleeter, Matt Buthe, Lee Chern, Zac Thottakara, Dakota Lash
+                  </p>
+                </div>
+                <div *ngIf="showingSponsers">
+                  <p>
+                    We would like to extend a special thanks to those who have helped with this project!
+                    Jeff Salvage
+                    Chris Carrol
+                  </p>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
