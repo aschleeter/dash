@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { GeneralComponent } from './general/general.component';
 import { SettingsComponent } from './settings/settings.component';
 import { DomainRiskComponent } from './domain-risk/domain-risk.component';
+import { TestComponent} from './test/test.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent
+  },
+  {
+    path: 'test',
+    component: TestComponent
   }
 ];
 

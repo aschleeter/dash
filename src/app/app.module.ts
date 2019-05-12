@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
 import { GeneralComponent } from './general/general.component';
 import { DomainRiskComponent } from './domain-risk/domain-risk.component';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -28,7 +29,8 @@ import { DomainRiskComponent } from './domain-risk/domain-risk.component';
     AboutComponent,
     SettingsComponent,
     GeneralComponent,
-    DomainRiskComponent
+    DomainRiskComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
