@@ -11,6 +11,6 @@ export class TestService {
   constructor(public http: HttpClient) { }
 
   public getTest(): Observable<any> {
-     return this.http.get('http://localhost:30056/DASHDashboard');
+     return this.http.get('http://127.0.0.1:8000/');
   }  
 }
