@@ -73,8 +73,41 @@ export class TestComponent implements OnInit {
   );
   return;
   }
+  public onGet7(): Observable<Object> {
+    this.testservice.getTest7().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
+  public onGet8(): Observable<Object> {
+    this.testservice.getTest8().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
   public onGet6(): Observable<Object> {
     this.testservice.getTest6().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
+  public onGet9(): Observable<Object> {
+    this.testservice.getTest9().subscribe(
        data => {
         console.log(data);
       },
