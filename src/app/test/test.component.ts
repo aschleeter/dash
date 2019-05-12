@@ -15,14 +15,16 @@ export class TestComponent implements OnInit {
   testGet = {};
 
   ngOnInit() {}
-  
-  //onPost() {
-    //this.testservice.postTest().subscribe(data => this.testPost = data);
-  //}
-  onGet() {
-    this.testservice.getTest().subscribe(data => {
-        console.log("Data recieved:", data)
-      };
-  }
 
+  public onGet(): Observable<Object> {
+    this.testservice.getTest().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
 }

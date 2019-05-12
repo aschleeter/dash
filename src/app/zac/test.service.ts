@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TestService {
 
   constructor(public http: HttpClient) { }
 
-  public getTest(): void {
-    return this.http.get('http://localhost:30056/')
-    );
+  public getTest(): Observable<any> {
+     return this.http.get('http://localhost:30056');
   }  
 }
