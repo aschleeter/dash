@@ -19,4 +19,13 @@ export class TestService {
  public getTest3(): Observable<any> {
   return this.http.get('http://192.168.1.204:30056/');
 }
+public getTest4(): Observable<any> {
+  return this.http.get('https://192.168.1.204:30056/');
+}
+public getTest5(): Observable<any> {
+  return this.http.get('https://192.168.1.204:30056/');
+}
+public getTest6(): Observable<any> {
+  return this.http.get('https://192.168.1.204:30056/');
+}
 }
