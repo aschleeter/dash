@@ -16,8 +16,32 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {}
 
-  public onGet(): Observable<Object> {
-    this.testservice.getTest().subscribe(
+  public onGet1(): Observable<Object> {
+    this.testservice.getTest1().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
+
+  public onGet2(): Observable<Object> {
+    this.testservice.getTest2().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
+
+  public onGet3(): Observable<Object> {
+    this.testservice.getTest3().subscribe(
        data => {
         console.log(data);
       },
