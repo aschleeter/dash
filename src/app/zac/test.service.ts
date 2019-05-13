@@ -5,7 +5,7 @@ import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'text/json'
+    'Content-Type':  'application/json'
   })
 };
 
@@ -22,6 +22,6 @@ export class TestService {
   }
 
   public postTest(test): Observable<any> {
-    return this.http.post('https://192.168.1.204:30056/', { data: test }, httpOptions);
+    return this.http.post('https://192.168.1.204:30056/', { 'data': 'test' }, httpOptions);
   }
 }
