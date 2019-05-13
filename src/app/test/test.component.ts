@@ -33,8 +33,7 @@ export class TestComponent implements OnInit {
   }
   
   public onPost(): void {
-    const postData = this.testForm.value;
-    this.testservice.postTest(postData).subscribe(
+    this.testservice.postTest("1234").subscribe(
         data => {
           console.log(data);
         },
@@ -44,3 +43,5 @@ export class TestComponent implements OnInit {
       );
   }
 }
+
+

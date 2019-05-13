@@ -14,7 +14,7 @@ export class TestService {
     return this.http.get('https://192.168.1.204:30056/');
   }
 
-  public postTest(test: String): Observable<any> {
+  public postTest(test): Observable<any> {
     return this.http.post('https://192.168.1.204:30056/', { data: test });
   }
 }
