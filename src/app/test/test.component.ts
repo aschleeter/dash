@@ -77,6 +77,17 @@ export class TestComponent implements OnInit {
   );
   return;
   }
+    public onGet6(): Observable<Object> {
+    this.testservice.getTest6().subscribe(
+       data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+  );
+  return;
+  }
   public onGet7(): Observable<Object> {
     this.testservice.getTest7().subscribe(
        data => {
@@ -90,17 +101,6 @@ export class TestComponent implements OnInit {
   }
   public onGet8(): Observable<Object> {
     this.testservice.getTest8().subscribe(
-       data => {
-        console.log(data);
-      },
-      err => {
-        console.log(err);
-      }
-  );
-  return;
-  }
-  public onGet6(): Observable<Object> {
-    this.testservice.getTest6().subscribe(
        data => {
         console.log(data);
       },
