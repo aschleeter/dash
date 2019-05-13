@@ -33,16 +33,7 @@ export class TestComponent implements OnInit {
   }
   
   public onPost(): void {
-    const req = this.testservice.postTest("1234");
-    req.subscribe(
-        data => {
-          console.log(data);
-        },
-        err => {
-          console.log(err);
-        }
-      );
-    req.subscribe(
+    this.testservice.postTest("1234").subscribe(
         data => {
           console.log(data);
         },
