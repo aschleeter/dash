@@ -17,11 +17,21 @@
     <p></p>
     <button type="button" (click)="onGet6()">GET test3 https</button>
     <p></p>
-    <button type="button" (click)="onGet7()">GET test3 https</button>
+    <button type="button" (click)="onGet7()">GET test1 no port</button>
     <p></p>
-    <button type="button" (click)="onGet8()">GET test3 https</button>
+    <button type="button" (click)="onGet8()">GET test2 no port</button>
     <p></p>
-    <button type="button" (click)="onGet9()">GET test3 https</button>
+    <button type="button" (click)="onGet9()">GET test3 no port</button>
     <p></p>
-  </div>
+
+
+
+    <form formGroup="testForm" method="post" (ngSubmit)="onPost()">
+      <div class="field">
+        <input class="input" type="text" placeholder="Name" formControlName="name">
+      </div>
+      <button class="button is-primary" type="submit">
+        Submit
+      </button>
+    </form>
 </div>

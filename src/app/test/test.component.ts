@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TestService } from './../zac/test.service';
+import {
+  FormGroup
+} from '@angular/forms';
 
 @Component({
   selector: 'app-test',
@@ -9,6 +12,7 @@ import { TestService } from './../zac/test.service';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
+  public testForm: FormGroup;
 
   constructor( private testservice: TestService) { }
   testPost = {};
@@ -116,5 +120,19 @@ export class TestComponent implements OnInit {
       }
   );
   return;
+  }
+  public onPost(): void {
+    if (this.testForm.valid) {
+      const postData = this.testForm.value;
+
+      this.testservice.postTest(postData).subscribe(
+        data => {
+          console.log(data);
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    }
   }
 }
