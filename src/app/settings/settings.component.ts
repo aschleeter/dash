@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './../user/user.service';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userservice: UserService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public newUser(): void {
+    this.userservice.newUser().subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
-
 }

@@ -12,11 +12,11 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class GraphService {
+export class UserService {
 
-  constructor (public http: HttpClient) { }
+  constructor(public http: HttpClient) { }
 
-  public refreshGraphs(): Observable<any> {
-    return this.http.post('https://192.168.1.204:30056/', { 'cmd':'refreshGraphs' }, httpOptions);
+  public newUser(): Observable<any> {
+    return this.http.post('https://192.168.1.204:30056/', { 'data': 'test' }, httpOptions);
   }
 }

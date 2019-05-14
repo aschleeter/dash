@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GraphService } from '../graph/graph.service';
 
 @Component({
   selector: 'app-domain-risk',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DomainRiskComponent implements OnInit {
 
-  constructor() { }
+  constructor(public graph: GraphService) { }
 
   ngOnInit() {
   }
-
+  
+  public refreshDomain(): void {
+    this.graph.refreshGraphs();
+  }
 }
