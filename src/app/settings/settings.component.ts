@@ -13,7 +13,7 @@ export class SettingsComponent implements OnInit {
   ngOnInit() {}
 
   public newUser(): void {
-    this.userservice.newUser().subscribe(
+    this.userservice.newUser('','','','').subscribe(
       data => {
         console.log(data);
       },

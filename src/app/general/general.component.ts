@@ -17,5 +17,6 @@ export class GeneralComponent implements OnInit {
 
   public refreshGeneral(): void {
     this.graph.refreshGraphs();
+    this.ngOnInit();
   }
 }
