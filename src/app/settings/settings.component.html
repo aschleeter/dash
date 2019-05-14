@@ -1,3 +1,21 @@
-<p>
-  settings works!
-</p>
+<div class="columns is-centered">
+  <div class="column is-5">
+    <form method="POST" (ngSubmit)=onSubmit()>
+      <div>
+        <label>First Name</label>
+        <input class="input is-warning" type="text" placeholder="First Name">
+        <label>Last Name</label>
+        <input class="input is-warning" type="text" placeholder="Last Name">
+        <label>Password</label>
+        <input class="input is-warning" type="email" placeholder="Email">
+        <label>Password</label>
+        <input class="input is-warning" type="password" placeholder="Password">
+        <input type="checkbox">  
+        <label class="checkbox">Lock User</label>
+      </div>
+      <div>
+        <button class="button is-warning" type="submit">Create User</button>
+      </div>
+    </form>
+  </div>
+</div>

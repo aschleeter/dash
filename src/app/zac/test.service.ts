@@ -1,3 +1,5 @@
+//this was used purely for testing purposes. May be removed in the future.
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -5,7 +7,7 @@ import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'text/plain'
+    'Content-Type':  'text/json'
   })
 };
 

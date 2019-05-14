@@ -1,30 +1,72 @@
 <div class="columns is-centered">
-    <div class="column is-5">
+    <div class="column is-6">
         <div class="card">
             <header class="card-header"></header>
                 <div class="card-content">
                     <div class="tabs">
                         <ul>
+                          <li [ngClass]="{'is-active': showingProject}" (click)="showProject()">
+                              <a>The Project</a>
+                          </li>
                           <li [ngClass]="{'is-active': showingTeam}" (click)="showTeam()">
                             <a>The Team</a>
                           </li>
                           <li [ngClass]="{'is-active': showingSponsers}" (click)="showSponsers()">
                               <a>Our Sponsers</a>
-                            </li>
+                          </li>
                        </ul>
               </div>
-                <div *ngIf="showingTeam">
+              <div *ngIf="showingProject">
                   <p>
-                    Alexis Schleeter, Matt Buthe, Lee Chern, Zac Thottakara, Dakota Lash
+                      Businesses that just suffered from data leaks and phishing attacks are consistently found to lack IT visibility before and after an attack. Benjamin Franklin said that if you fail to plan, you plan to fail, and not planning your mitigation protocols in the event of an attack sets you up to fail. One step to ensure visibility pre and post attack is to install a separate network monitoring tool; it reduces downtime, facilitates cyber forensic teams and supports auditing procedures
+                      It is impossible to devise mitigation strategies on your network if you cannot effectively monitor traffic patterns. DASH solves this problem by allowing companies to assess their network through modular tools such as a domain risk assessor, an external ownership classifier, and an internal ownership validator. The analysis and its insights are visualized and available to view as a front-end application. DASH is a free and open-source software tool.                      
                   </p>
                 </div>
+                <div *ngIf="showingTeam">
+                    <table class="table"> 
+                        <tbody>
+                          <tr>
+                            <td>Matt Buthe</td>
+                            <td>Project Manager/Data Visulization</td>
+                          </tr>
+                          <tr>
+                            <td>Dakota Lash</td>
+                            <td>Database Administrator</td>
+                          </tr>
+                          <tr>
+                            <td>Lee Chern</td>
+                            <td>Network and Security Expert</td>
+                          </tr>
+                          <tr>
+                            <td>Zac Thottakara</td>
+                            <td>Python Developer</td>
+                          </tr>
+                          <tr>
+                            <td>Alexis Schleeter</td>
+                            <td>AngularJS Developer</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
                 <div *ngIf="showingSponsers">
-                  <p>
-                    We would like to extend a special thanks to those who have helped with this project!
-                    Jeff Salvage
-                    Chris Carrol
-                  </p>
-                  </div>
+                  <p>We would like to extend a special thanks to those who helped with this project!</p>
+                    <table class="table"> 
+                        <tbody>
+                          <tr>
+                            <td>Security Risk Advisors</td>
+                            <td>Project Sponsor</td>
+                          </tr>
+                          <tr>
+                            <td>Professor Chris Carrol</td>
+                            <td>Project Sponsor</td>
+                          </tr>
+                          <tr>
+                            <td>Professor Jeff Salvage</td>
+                            <td>Project Advisor</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
             </div>
         </div>
     </div>

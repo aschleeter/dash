@@ -1,3 +1,5 @@
+//Created for testing. Can be removed in the future
+
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
