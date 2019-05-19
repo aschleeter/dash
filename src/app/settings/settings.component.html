@@ -1,11 +1,10 @@
 <div class="columns is-centered">
   <div class="column is-5">
-    <form method="POST" (ngController)="formCtrl">
+    <form method="POST">
       <div>
         <label>First Name</label>
         <input class="input is-warning" type="text" placeholder="First Name" ng-model="firstName">
         <label>Last Name</label>
-        <p>{{firstName}}</p>
         <input class="input is-warning" type="text" placeholder="Last Name" ng-model="lastName">
         <label>Password</label>
         <input class="input is-warning" type="email" placeholder="Email" ng-model="email">
@@ -15,7 +14,7 @@
         <label class="checkbox">Lock User</label>
       </div>
       <div>
-        <a class="button is-warning" (click)="newUser(firstName, lastName, email, password)">Create User</a>
+        <a class="button is-warning">Create User</a>
       </div>
     </form>
   </div>
